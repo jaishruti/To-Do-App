@@ -1,0 +1,148 @@
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --light: #EEE;
+    --pink: #EC4899;
+    --gray: #687280;
+    --purple: #885CF6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Lucida Handwriting", cursive;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark);
+    color: var(--light);
+}
+body h1{
+    color: var(--gray);
+}
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#new-task-form {
+    display: flex;
+}
+
+input,
+button {
+    appearance: none;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+#new-task-input {
+    flex: 2 2 50%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+}
+
+#new-task-input::placeholder {
+    color: var(--pink);
+}
+
+#new-task-submit {
+    color: var(--pink);
+    font-size: medium;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 100;
+    cursor: pointer;
+    transition: 1.4s;
+}
+#new-task-submit:hover{
+    opacity: 0.4;
+}
+#new-task-submit:active{
+    opacity: 0.7;
+}
+main{
+    flex: 1 1 0%;
+    padding: 1rem;
+    max-width: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+.task-list{
+    padding: 1rem;
+}
+.task-list h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+/* .per-task{
+    display: flex;
+    padding-left: 1rem;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+} */
+#tasks .task{
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+#tasks .task .content .text{
+    color: var(--light);
+    font-size:1rem;
+    font-family: cursive;
+    min-width:max-content;
+    width: 100%;
+    transition: 0.4s;
+    text-align-last: auto;
+}
+#tasks .task .content .text:not(:read-only){
+    color: var(--pink);
+}
+.task-list .task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+.task-list .actions button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight:800;
+    text-transform: uppercase;
+    transition: 0.4s;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.actions button:hover{
+    opacity: 0.6;
+    font-weight: 400;
+}
+.actions button:active{
+    opacity: 0.5;
+}
+.actions .edit{
+    font-weight: 500;
+}
+
